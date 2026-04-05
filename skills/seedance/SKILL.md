@@ -9,11 +9,16 @@ The `meme-master` CLI generates videos using Seedance 2.0 models on the Volcengi
 
 ## Prerequisites
 
-The user needs `ARK_API_KEY` set in their environment. Never hardcode or generate credentials. If the command fails with "Missing ARK_API_KEY", tell the user to set it:
+> **Note:** This skill is built for `https://seedance.infinitext.cn/`. It also works with the official Volcengine Ark API, but compatibility is not guaranteed.
+
+The user needs these environment variables set:
 
 ```bash
 export ARK_API_KEY="their-key-here"
+export ARK_BASE_URL="https://seedance.infinitext.cn/api/v3"
 ```
+
+Never hardcode or generate credentials. If the command fails with "Missing ARK_API_KEY", tell the user to set both variables above.
 
 ## Models
 

@@ -5,7 +5,7 @@ Condensed endpoint and parameter reference for quick lookup.
 ## Base URL
 
 ```
-https://ark.cn-beijing.volces.com/api/v3
+https://seedance.infinitext.cn/api/v3
 ```
 
 ## Authentication

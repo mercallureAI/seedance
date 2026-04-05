@@ -1,6 +1,8 @@
 # Seedance 2.0 Agent Skills
 
-Agent skills for generating videos with [Seedance 2.0](https://console.volcengine.com/ark/region:ark+cn-beijing/model/detail?Id=doubao-seedance-2-0) and Seedance 2.0 fast models on the Volcengine Ark platform.
+Agent skills for generating videos with [Seedance 2.0](https://console.volcengine.com/ark/region:ark+cn-beijing/model/detail?Id=doubao-seedance-2-0) and Seedance 2.0 fast models.
+
+> **Note:** These skills are built for `https://seedance.infinitext.cn/`. They also work with the official Volcengine Ark API, but compatibility is not guaranteed.
 
 ## Install
 

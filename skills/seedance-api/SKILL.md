@@ -37,8 +37,10 @@ Video generation is **asynchronous** — a two-step process:
 ## API Base URL
 
 ```
-https://ark.cn-beijing.volces.com/api/v3
+https://seedance.infinitext.cn/api/v3
 ```
+
+> **Note:** These skills are built for `https://seedance.infinitext.cn/`. They also work with the official Volcengine Ark API (`https://ark.cn-beijing.volces.com/api/v3`), but compatibility is not guaranteed.
 
 ## Endpoints
 
@@ -149,7 +151,7 @@ Each item in the `content` array has a `type` and corresponding payload:
 
 ```bash
 # Step 1: Create task
-curl -X POST https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks \
+curl -X POST https://seedance.infinitext.cn/api/v3/contents/generations/tasks \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $ARK_API_KEY" \
   -d '{
@@ -167,7 +169,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks
 }'
 
 # Step 2: Poll for result (replace TASK_ID)
-curl -X GET https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/TASK_ID \
+curl -X GET https://seedance.infinitext.cn/api/v3/contents/generations/tasks/TASK_ID \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $ARK_API_KEY"
 ```
@@ -175,7 +177,7 @@ curl -X GET https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/
 ### curl — Image-to-Video (First Frame)
 
 ```bash
-curl -X POST https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks \
+curl -X POST https://seedance.infinitext.cn/api/v3/contents/generations/tasks \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $ARK_API_KEY" \
   -d '{
@@ -208,7 +210,7 @@ from volcenginesdkarkruntime import Ark
 
 # pip install 'volcengine-python-sdk[ark]'
 client = Ark(
-    base_url="https://ark.cn-beijing.volces.com/api/v3",
+    base_url="https://seedance.infinitext.cn/api/v3",
     api_key=os.environ.get("ARK_API_KEY"),
 )
 
@@ -373,15 +375,15 @@ To generate speech, put dialogue in quotes: `The man says: "Hello, welcome!"`
 
 ```bash
 # List recent tasks
-curl -X GET "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks?page_num=1&page_size=10" \
+curl -X GET "https://seedance.infinitext.cn/api/v3/contents/generations/tasks?page_num=1&page_size=10" \
   -H "Authorization: Bearer $ARK_API_KEY"
 
 # Filter by status
-curl -X GET "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks?filter.status=succeeded" \
+curl -X GET "https://seedance.infinitext.cn/api/v3/contents/generations/tasks?filter.status=succeeded" \
   -H "Authorization: Bearer $ARK_API_KEY"
 
 # Delete a task
-curl -X DELETE "https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/TASK_ID" \
+curl -X DELETE "https://seedance.infinitext.cn/api/v3/contents/generations/tasks/TASK_ID" \
   -H "Authorization: Bearer $ARK_API_KEY"
 ```
 

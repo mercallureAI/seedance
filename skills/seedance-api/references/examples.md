@@ -31,7 +31,7 @@ result = client.content_generation.tasks.create(
 ```
 
 ```bash
-curl -X POST https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks \
+curl -X POST https://seedance.infinitext.cn/api/v3/contents/generations/tasks \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $ARK_API_KEY" \
   -d '{"model":"doubao-seedance-2-0-260128","content":[{"type":"text","text":"A cat yawning at the camera"}],"generate_audio":true,"ratio":"16:9","duration":5}'
@@ -245,7 +245,7 @@ while True:
 ```bash
 # Bash polling
 while true; do
-  STATUS=$(curl -s https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks/$TASK_ID \
+  STATUS=$(curl -s https://seedance.infinitext.cn/api/v3/contents/generations/tasks/$TASK_ID \
     -H "Authorization: Bearer $ARK_API_KEY" | jq -r '.status')
   echo "Status: $STATUS"
   [ "$STATUS" = "succeeded" ] || [ "$STATUS" = "failed" ] && break

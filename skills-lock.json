@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "seedance": {
+      "source": "mercallureAI/seedance",
+      "sourceType": "github",
+      "computedHash": "cb60249ed0cfdbe61d8a0f07e13278440c7341ad4a3a1910d813a67540f17f5b"
+    },
+    "seedance-api": {
+      "source": "mercallureAI/seedance",
+      "sourceType": "github",
+      "computedHash": "47631f8b3094640d8356ae809a0767da3c784c753abb636c2c42e70b7fb1b7b5"
+    }
+  }
+}
